@@ -1,17 +1,17 @@
 {% set name = "tensorflowonspark" %}
-{% set version = "2.2.1" %}
+{% set version = "2.2.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 68ee5aca6941814ac143b1537ffaf1ef55ef294ca1530c4606e3ae7477463b99
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 68ff6a2a856e04e19577f0838a863ee0ec8de98151f969bb9def128c198f8270
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -26,11 +26,11 @@ test:
     - tensorflowonspark
 
 about:
-  home: "https://github.com/yahoo/TensorFlowOnSpark"
+  home: https://github.com/yahoo/TensorFlowOnSpark
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: "Deep learning with TensorFlow on Apache Spark clusters"
+  summary: Deep learning with TensorFlow on Apache Spark clusters
   doc_url: https://yahoo.github.io/TensorFlowOnSpark
 
 extra:
