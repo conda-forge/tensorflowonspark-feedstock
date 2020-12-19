@@ -17,16 +17,17 @@ build:
   noarch: python
 
 requirements:
+  build:
+    - setuptools >=41.0.0
   host:
     - pip
     - python
-    - setuptools >=41.0.0
   run:
     - packaging
     - pyspark
     - python
     - six
-    - tensorflow >=2.0.0
+    - tensorflow
 
 test:
   imports:
