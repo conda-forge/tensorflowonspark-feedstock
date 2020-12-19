@@ -1,0 +1,25 @@
+From 41f6d8fcc073dcddd5fa36d0a4467d7bc999d76c Mon Sep 17 00:00:00 2001
+From: Andrew Floren <afloren@palantir.com>
+Date: Sat, 19 Dec 2020 01:35:59 -0500
+Subject: [PATCH] fix version check
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 4c1ccd5..3892309 100644
+--- a/setup.py
++++ b/setup.py
+@@ -9,7 +9,7 @@ import sys
+ 
+ 
+ def setuptools_version_supported():
+-    major, minor, patch = setuptools.__version__.split('.')
++    major, minor, patch, *_ = setuptools.__version__.split('.')
+     if int(major) > 38:
+         return True
+     return False
+-- 
+2.25.2
+
