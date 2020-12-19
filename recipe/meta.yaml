@@ -19,12 +19,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python
     - setuptools >=41.0.0
   run:
     - packaging
-    - pyspark >=2.4.7
-    - python >=3.8
+    - pyspark
+    - python
     - six
     - tensorflow >=2.0.0
 
