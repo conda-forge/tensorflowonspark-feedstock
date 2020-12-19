@@ -22,7 +22,6 @@ requirements:
     - python
     - setuptools >=41.0.0
   run:
-    - numpy >=1.14.0
     - packaging
     - pyspark >=2.4.7
     - python
