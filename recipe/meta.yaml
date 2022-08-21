@@ -1,5 +1,5 @@
 {% set name = "tensorflowonspark" %}
-{% set version = "2.2.4" %}
+{% set version = "2.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b6f110260d8dc775edeacb7c6580dd9b7cd127b75129365bd8e7f40e27f81e01
+  sha256: 589c56f2faee45200d5dad7cf0cc110f950287b4f2c53cbdcae5fd5504e91fdd
   patches:
     - 0001-fix-version-check.patch
 
